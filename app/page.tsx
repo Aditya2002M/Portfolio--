@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
+/* eslint-disable react/no-children-prop */
 "use client";
 
 import { AuroraText } from "@/components/magicui/aurora-text";
@@ -935,8 +937,5 @@ const features = [
     className: "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4",
   },
 ];
-
-
-
 
 
