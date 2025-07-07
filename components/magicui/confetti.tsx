@@ -17,7 +17,10 @@ import React, {
   useRef,
 } from "react";
 
-import { Button, ButtonProps } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
+
+// If ButtonProps is not exported, define a fallback type:
+type ButtonProps = React.ComponentPropsWithoutRef<"button">;
 
 type Api = {
   fire: (options?: ConfettiOptions) => void;

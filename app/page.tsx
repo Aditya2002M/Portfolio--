@@ -85,7 +85,7 @@ export default function Home() {
   ];
 
   // Add a ref to access the Confetti API
-  const confettiRef = useRef(null);
+  const confettiRef = useRef<{ fire: () => void } | null>(null);
   const achievementRef = useRef(null);
  
   const [isLoading, setIsLoading] = useState(true);
@@ -132,7 +132,7 @@ export default function Home() {
     let intervalId: NodeJS.Timeout | null = null;
     if (aboutInView) {
       intervalId = setInterval(() => {
-        // @ts-expect-error
+        
         confettiRef.current?.fire && confettiRef.current.fire();
       }, 800);
     } else if (intervalId) {
