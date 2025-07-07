@@ -16,20 +16,14 @@ import { TextAnimate } from "@/components/magicui/text-animate";
 import React, { useRef, useEffect, useState } from "react";
 import { Confetti } from "@/components/magicui/confetti";
 import { MagicCard } from "@/components/magicui/magic-card";
-import {
-  BellIcon,
-  CalendarIcon,
-  FileTextIcon,
-  GlobeIcon,
-  InputIcon,
-} from "@radix-ui/react-icons";
-import { ConfettiButton } from "@/components/magicui/confetti";
+
 import Image from "next/image";
 import img1 from "../public/img1.png";
 import img2 from "../public/img2.png";
 import img3 from "../public/img3.png";
 import img5 from "../public/img5.png";
 import img4 from "../public/img4.png";
+import { FileTextIcon } from "lucide-react";
 
 // Theme toggle icons
 const SunIcon = () => (
@@ -93,7 +87,7 @@ export default function Home() {
   // Add a ref to access the Confetti API
   const confettiRef = useRef(null);
   const achievementRef = useRef(null);
-  const hasFiredRef = useRef(false);
+ 
   const [isLoading, setIsLoading] = useState(true);
   const aboutRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
